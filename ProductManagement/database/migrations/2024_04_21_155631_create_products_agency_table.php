@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePriceListsTable extends Migration
+class CreateProductsAgencyTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,13 @@ class CreatePriceListsTable extends Migration
      */
     public function up()
     {
-        Schema::create('price_lists', function (Blueprint $table) {
+        Schema::create('products_agency', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('price');
+            $table->unsignedBigInteger('products_id');
+            $table->unsignedBigInteger('price_lists_id');
             $table->unsignedBigInteger('agency_id');
+            $table->foreign('products_id')->references('id')->on('products');
+            $table->foreign('price_lists_id')->references('id')->on('price_lists');
             $table->foreign('agency_id')->references('id')->on('agencies');
             $table->timestamps();
         });
@@ -30,6 +32,6 @@ class CreatePriceListsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('price_lists');
+        Schema::dropIfExists('products_agency');
     }
 }
