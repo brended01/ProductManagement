@@ -15,8 +15,8 @@
         <div id="navbar">
             <navbar />
         </div>
-        <div id="products">
-            <products />
+        <div id="agencies">
+            <agencies />
         </div>
 
     </div>

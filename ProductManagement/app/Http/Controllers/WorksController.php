@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;
-use App\Models\ProductsPriceList;
 use App\Models\Work;
 use Illuminate\Http\Request;
 
-class ProductController extends Controller
+class WorksController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,20 +14,15 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('products');
+        return view('works');
     }
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function get(Request $request)
+    public function get()
     {
-
-        $products = Product::get();
-        return $products;
+        $works = Work::with('product')->with('agency')->with('pricelist')->get();
+        return $works;
     }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -39,10 +32,17 @@ class ProductController extends Controller
     {
         $dataValidate = $request->validate([
             'name' => 'required',
-            'price' => 'required'
+            'qty' => 'required',
+            'agency_id' => 'required',
+            'products_id' => 'required',
+            'price_lists_id' => ''
         ]);
+
         try {
-            $result = Product::create($dataValidate);
+            if (!$request->filled('price_lists_id')) {
+                $dataValidate['price_lists_id'] = 0;
+            }
+            $result = Work::create($dataValidate);
 
             return response()->json(['success' => true, 'data' => $result], 200);
         } catch (\Exception $e) {
@@ -104,12 +104,9 @@ class ProductController extends Controller
     public function destroy(Request $request)
     {
         $id = $request->input('id');
+
         try {
-            Work::where('products', '=', $id)->delete();
-
-
-            ProductsPriceList::where('products_id', '=', $id)->delete();
-            $result = Product::destroy($id);
+            $result = Work::destroy($id);
 
             return response()->json(['success' => true, 'data' => $result], 200);
         } catch (\Exception $e) {

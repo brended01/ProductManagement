@@ -10,8 +10,9 @@
         "production": "mix --production"
     },
     "devDependencies": {
+        "@vitejs/plugin-vue": "^5.0.4",
         "@vue/compiler-sfc": "^3.4.23",
-        "axios": "^0.21",
+        "axios": "^0.21.4",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
         "postcss": "^8.1.14",
@@ -21,7 +22,12 @@
         "webpack-cli": "^5.1.4"
     },
     "dependencies": {
-        "@vitejs/plugin-vue": "^5.0.4",
-        "vue": "^3.4.23"
+        "bootstrap": "5.3",
+        "bootstrap-vue": "^2.23.1",
+        "multiselect": "^0.9.12",
+        "popper": "^1.0.1",
+        "vue": "^3.4.23",
+        "vue-multi-select": "^4.6.0",
+        "vue-multiselect": "^3.0.0"
     }
 }

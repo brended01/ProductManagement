@@ -1,1 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
+.body{
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/* Stili per il modal */
+ .modal-custom {
+    /* Nascondi il modal di default */
+    position: fixed;
+    /* Posizionamento fisso per coprire l'intera finestra */
+    z-index: 100;
+    /* Posizionamento sopra tutti gli altri elementi */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* Abilita lo scrolling quando necessario */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Sfondo scuro trasparente */
+}
+
+/* Contenitore per il modal */
+.modal-custom .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* Posizionamento centrale */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    /* Larghezza del modal */
+    background-image: url('https://www.example.com/your-background-image.jpg');
+    /* URL dello sfondo */
+    background-size: cover;
+    /* Adatta lo sfondo alla dimensione del modal */
+}
+
+/* Stili per il form */
+.modal-custom .modal-content form {
+    display: grid;
+    gap: 10px;
+}
+
+.modal-custom .modal-content input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.modal-custom .modal-content input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modal-custom .modal-content input[type="submit"]:hover {
+    background-color: #45a049;
+}
