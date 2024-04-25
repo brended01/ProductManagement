@@ -9,7 +9,7 @@
                 <div class="container">
                     <div class="row mb-2 mt-4 ">
                         <input class="col-6" id="name" v-model="formCreate.name" type="text" placeholder="Nome">
-                        <input class="col-2 offset-4" id="qty" v-model="formCreate.qty" type="text" placeholder="Quantità">
+                        <input class="col-2 offset-4" id="qty" v-model="formCreate.qty" type="number" placeholder="Quantità">
                     </div>
                     <div class="row mb-2">
                         <label for="agency">Seleziona agenzia:</label>

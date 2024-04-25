@@ -9,7 +9,7 @@
                 <div class="container">
                     <div class="row mb-2 mt-4 ">
                         <input class="col-6" id="name" v-model="formCreate.name" type="text" placeholder="Nome">
-                        <input class="col offset-2" id="price" v-model="formCreate.price" type="text" placeholder="Prezzo">
+                        <input class="col offset-2" id="price" v-model="formCreate.price" type="number" placeholder="Prezzo">
 
                     </div>
                     <div class="row mb-2">
