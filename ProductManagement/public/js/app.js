@@ -21180,7 +21180,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       this.formCreate.qty = '';
       this.selectedAgency = [];
       this.selectedProducts = [];
-      this.selectedWorks = [];
+      this.selectedPriceLists = [];
     },
     submitCreate: function submitCreate() {
       var _this5 = this;

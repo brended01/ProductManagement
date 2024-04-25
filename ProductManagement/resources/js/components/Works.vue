@@ -158,7 +158,7 @@ export default {
         this.formCreate.qty = ''
         this.selectedAgency = []
         this.selectedProducts = []
-        this.selectedWorks = []
+        this.selectedPriceLists = []
 
     },
     async submitCreate() {
