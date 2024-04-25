@@ -21490,14 +21490,15 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     options: $data.optionAgencies
   }, null, 8 /* PROPS */, ["modelValue", "options"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [_hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_multiselect, {
     id: "products",
+    "track-by": "id",
     multiple: "true",
     label: "name",
-    placeholder: "Seleziona prodotti",
-    "class": "col m-0",
     modelValue: $data.selectedProducts,
     "onUpdate:modelValue": _cache[4] || (_cache[4] = function ($event) {
       return $data.selectedProducts = $event;
     }),
+    placeholder: "Seleziona prodotti",
+    "class": "col m-0",
     options: $data.optionProducts
   }, null, 8 /* PROPS */, ["modelValue", "options"])])]), _hoisted_10], 32 /* NEED_HYDRATION */)])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), _hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     "class": "btn btn-primary btn-sm mr-3",

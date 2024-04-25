@@ -18,7 +18,7 @@
                     </div>
                     <div class="row mb-2">
                         <label for="products">Seleziona prodotti:</label>
-                        <multiselect id="products" multiple="true" label="name" placeholder="Seleziona prodotti" class="col m-0" v-model="selectedProducts" :options="optionProducts"></multiselect>
+                        <multiselect id="products" track-by="id" multiple="true" label="name" v-model="selectedProducts" placeholder="Seleziona prodotti" class="col m-0" :options="optionProducts"></multiselect>
                     </div>
                 </div>
                 <input type="submit" value="Aggiungi">
